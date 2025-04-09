@@ -30,13 +30,15 @@
   <EventsModifiers/>
    <ComputedProps/>
    <!-- passing props from parent to child component -->
- <childComponent  :message="parentMessage"/>
+ <ChildComponent  :message="parentMessage"/>
+<NextChild :items ="itemlist"/>
 
   </div>
 </template>
 
 <script>
- import childComponent from './components/childComponent.vue';
+import NextChild from './components/nextChild.vue';
+ import ChildComponent from './components/ChildComponent.vue';
 import EventsModifiers from './components/EventsModifiers.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import ComputedProps from './components/computed.vue';
@@ -52,6 +54,7 @@ export default {
       todos:['apple', 'banana', 'orange'],
       htmlContent: '<strong>This is bold HTML text</strong>',
       parentMessage: 'Hello from Parent Component', 
+      itemlist: ['Item 1', 'Item 2', 'Item 3'],
     }
 
   },
@@ -59,7 +62,8 @@ export default {
     HelloWorld,
     EventsModifiers,
     ComputedProps,
-    childComponent
+    ChildComponent,
+    NextChild,
   },
 
 }
