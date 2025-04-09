@@ -29,13 +29,14 @@
   <HelloWorld/>
   <EventsModifiers/>
    <ComputedProps/>
- 
+   <!-- passing props from parent to child component -->
+ <childComponent  :message="parentMessage"/>
 
   </div>
 </template>
 
 <script>
- 
+ import childComponent from './components/childComponent.vue';
 import EventsModifiers from './components/EventsModifiers.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import ComputedProps from './components/computed.vue';
@@ -50,14 +51,15 @@ export default {
       isVisible: true,
       todos:['apple', 'banana', 'orange'],
       htmlContent: '<strong>This is bold HTML text</strong>',
-      
+      parentMessage: 'Hello from Parent Component', 
     }
 
   },
   components: {
     HelloWorld,
     EventsModifiers,
-    ComputedProps
+    ComputedProps,
+    childComponent
   },
 
 }
