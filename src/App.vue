@@ -38,7 +38,7 @@
 
 <script>
 import NextChild from './components/nextChild.vue';
- import ChildComponent from './components/ChildComponent.vue';
+import ChildComponent from './components/ChildComponent.vue';
 import EventsModifiers from './components/EventsModifiers.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import ComputedProps from './components/computed.vue';
@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       message: 'Hello from Vue 3!',
-      isActive: true,
+      isActive: false,
       count :"10",
       role: 'admin',
       isVisible: true,
